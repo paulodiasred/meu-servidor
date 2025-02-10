@@ -6,9 +6,7 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors({
-  origin: "https://meu-servidor-navy.vercel.app", // Substitua pela URL do seu frontend
-}));
+app.use(cors())
 
 // Rota GET que retorna um número aleatório entre 0 e 100
 app.get("/random", (req, res) => {
