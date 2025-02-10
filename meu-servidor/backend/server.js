@@ -1,9 +1,11 @@
 // Importando as bibliotecas necessárias
 const express = require("express");
+const cors = require("cors");
 
+app.use(cors());
 // Criando a aplicação Express
 const app = express();
-const PORT = 3000; // Porta onde o servidor vai rodar
+const PORT = process.env.PORT || 3000;
 
 // Rota GET que retorna um número aleatório entre 0 e 100
 app.get("/random", (req, res) => {
